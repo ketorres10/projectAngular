@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="car-body">
+        <h6 class="text-center">
+            Lista de beacons
+        </h6>
+        <table class="tble table-sm table-hover ">
+            <tbody>
+                <tr *ngFor = "let product of productList">
+                    <td>{{product.nom_sala}}</td>
+                    <td>{{product.ubicacion}}</td>
+                    <td>
+                       <a class="btn btn-secondary text-white" (click)= "onEdit(product)">
+                           <i class="far fa-edit"></i>
+                       </a>
+                       <a  class="btn btn-danger text-white " (click)= "onDelete(product.$key)">
+                            <i class="far fa-trash-alt"></i>
+                       </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
